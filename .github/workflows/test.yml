@@ -34,8 +34,8 @@ jobs:
       run: |
         aws s3 cp --recursive --region ap-northeast-2 build s3://innercircle-b.com
     
-    - name: Publish
+    - name: Publish package on NPM 
       run: npm publish
-      env: 
-        NODE_AUTH_TOKEN: ${{ secrets.SECRET_NPM_TOKEN }}
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   
