@@ -1,5 +1,9 @@
 {
-  "name": "innercircle_b",
+  "name": "@heejeong/innercircle_b",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heemomile/innercircle_team_b.git"
+  },
   "version": "0.1.0",
   "description": "inner circle B team",
   "dependencies": {
