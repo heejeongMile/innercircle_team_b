@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Inner Circle B team
+          Inner Circle B team !!
         </a>
       </header>
     </div>
