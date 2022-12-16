@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Inner Circle B team 입니다~!testtestsetes
+          Inner Circle B team 입니다.
         </a>
       </header>
     </div>
