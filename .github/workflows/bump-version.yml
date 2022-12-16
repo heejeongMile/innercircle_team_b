@@ -24,8 +24,7 @@ jobs:
       
     - name: git push master
       run: git push origin master --tags
-    - name: git push develop
-      run: git push origin develop --tags
+      
     - uses: actions/upload-artifact@v2
       with:
         name: src
