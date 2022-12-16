@@ -33,9 +33,20 @@ jobs:
         AWS_SECRET_ACCESS_KEY: ${{ secrets.SECRET_ACCESS_KEY }}
       run: |
         aws s3 cp --recursive --region ap-northeast-2 build s3://innercircle-b.com
-    
-    - name: Publish package on NPM 
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  
+  publish-npm:
+    name: Publish package on NPM 
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com'
+      
+      - name: Publish
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
   
